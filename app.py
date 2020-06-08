@@ -35,7 +35,7 @@ def login():
 @app.route('/join', methods=['GET', 'POST'])
 def join():
     if request.method == 'GET':
-        return render_template('joins.html')
+        return render_template('join.html')
     else:
         id = request.form['id']
         pw = request.form['pw']
