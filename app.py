@@ -25,11 +25,11 @@ def login():
         print(pw,type(pw))
         #id와 pw가 db 값이랑 비교 해서 맞으면 맞다 틀리면 틀리다
         ret = dbdb.select_user(id,pw)
-        print(ret[2])
+        print(ret)
         if ret != None:
             return "안녕하세요 ~ {} 님".format(ret[2])
         else:
-            return "아이디 또는 패스워드를 확인 하세요."
+            return "아이디 또는 패스워드를 확인 하세요.".format()
 
 #회원가입
 @app.route('/join', methods=['GET', 'POST'])
